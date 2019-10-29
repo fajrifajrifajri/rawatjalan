@@ -1,0 +1,5 @@
+frontPage(home):
+C:\xampp\htdocs\aplikasi-rawat-jalan\resources\views\pages\frontPage\frontPage-content
+
+resepsionis - pasien:
+C:\xampp\htdocs\aplikasi-rawat-jalan\resources\views\pages\Administrator\Resepsionis-input.php

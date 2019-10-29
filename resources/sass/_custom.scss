@@ -1,0 +1,1150 @@
+/// General
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+/// Color variables (variabel warna)
+$wht: #FFF; // Putih
+$bl: #73D6CC; // Biru primer
+$blsc: #70c9c0; // Biru sekunder
+$drkbl: #5D858D; // Biru gelap
+$gry: #707070; // Abu-abu
+
+/// Frontpage (Page pertama)
+#frontPage.container {
+	padding-left: 350px;
+	padding-right: 350px;
+}
+#frontPage {
+	background: linear-gradient(#76D8CE, #90F8EE);
+	font-size: 20px;
+	height: calc(100vh - 20px);
+	nav {
+		margin-top: 20px;
+		div {
+			font-family: 'Roboto Condensed', sans-serif;
+			font-size: 1em;
+			font-weight: 700;
+		}
+		div:nth-of-type(1) {
+			a:hover {
+				color: rgba(95,123,145,0.5);
+			}
+			a {
+				color: rgba(95,123,145,0.8);
+				text-decoration: none;
+			}
+		}
+		div:nth-of-type(2) {
+			a:hover {
+				color: rgba(53,102,112,0.5);
+			}
+			a {
+				color: rgba(53,102,112,0.8);
+				text-decoration: none;
+			}
+		}
+		div:nth-of-type(3) {
+			a:hover {
+				color: rgba(12,152,156,0.5);
+			}
+			a {
+				color: rgba(12,152,156,0.8);
+				text-decoration: none;
+			}
+		}
+	}
+	main {
+		display: flex;
+		height: 80vh;
+		#home, #kontak {
+			margin: auto;
+		}
+		#home {
+			h1 {
+				color: $wht;
+				text-align: center;
+			}
+			a {
+				display: block;
+				border-radius: 1em;
+				margin: 1em 0 0 0;
+				padding: .2em 4em;
+				color: $bl;
+				font-size: 1.5em;
+				font-weight: 900;
+			}
+			div {
+				//background: #22a5a7;
+				border-radius: .5em;
+				margin: 2em 0;
+				padding: 2em;
+				p {
+					//color: $wht;
+				}
+			}
+		}
+	}
+}
+
+/// Resepsionis - Navbar
+
+#resepsionis {
+	background: $bl;
+	nav {
+		background: $bl;
+		border-bottom: 10px solid $blsc;
+		div {
+			a {
+				img {
+					margin: 1em 0 0 5em;
+					width: 250px;
+				}
+			}
+			#trapezoid {
+				border-bottom: 100px solid $wht;
+				border-left: 50px solid transparent;
+				height: 0;
+				width: 500px;
+				// Font	
+				font-family: "Roboto", sans-serif;
+				font-size: 4em;
+				font-style: italic;
+				font-weight: 700;
+				text-align: center;
+				color: $bl;
+				hr:nth-of-type(2) {
+					transform: translate(-64px, 35px) rotate(116deg);
+				}
+				hr:nth-of-type(3) {
+					transform: translate(-54px, 35px) rotate(116deg);
+				}
+				hr {
+					position: absolute;
+					width: 113px;
+					transform: translate(-74px, 35px) rotate(116deg);
+					border-top: 2px solid $bl;
+				}
+			}
+		}
+	}
+}
+
+/// Resepsionis
+
+#resepsionis {
+	main {
+		background: $wht;
+		height: calc(100vh - 100px - 10px);
+		font-family: "Roboto", sans-serif;
+		overflow: auto;
+		#input {
+			padding: 20px 0 20px 200px;
+			color: $gry;
+			h1 {
+				font-family: "Roboto", sans-serif;
+				font-weight: 700;
+			}
+			form {
+				label, .form-group {
+					margin: .25em 0;
+					font-weight: 400;
+					.form-control {
+						font-weight: 300;
+					}
+				}
+				div:nth-of-type(3) { // Button pria atau wanita
+					margin: .25em 0;
+					label {
+						padding: .5em 2em;
+					}
+					label:nth-of-type(1).active {
+						background: #5e8a85;
+						border: #5e8a85;
+					}
+					label:nth-of-type(1) {
+						background: $bl;
+						border: $bl;
+					}
+					label:nth-of-type(2).active {
+						background: #c72486;
+						border: #c72486;
+					}
+					label:nth-of-type(2) {
+						background: #f786ca;
+						border: #f786ca;
+					}
+				}
+				.text-center { // Tombol submit
+					margin: 1em 0 0 0;
+					input {
+						background: $bl;
+						padding: .5em 4em;
+						border-radius: 2em;
+						font-size: 1.25em;
+					}
+				}
+			}
+			.col-md-4 { // Tombol RM(rekam medis) dan tombol keluar
+				display: flex;
+				> div {
+					margin: auto;
+					> a {	
+						margin: 1em;
+						text-decoration: none;
+						svg {
+							display: block;
+							font-size: 4em;
+							margin: auto;
+						}
+						span {
+							display: block;
+							text-align: center;
+							font-size: 1.25em;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+		#sukses {
+			height: calc(100vh - 100px - 10px);
+			div {
+			width: 100%;
+			text-align: center;
+				svg {
+					margin: .1em 0;
+					color: $bl;
+					font-size: 150px;
+				}
+				h1 {
+					color: $gry;
+					font-size: 2.5em;
+					font-weight: 700;
+					font-family: "Roboto", sans-serif;
+				}
+				h2 {
+					color: $gry;
+					font-size: 2em;
+					font-weight: 300;
+					font-family: "Roboto", sans-serif;
+					font-style: italic;
+					span {
+						opacity: .5;
+					}
+				}
+				h3 {
+					color: $gry;
+					font-size: 1.75em;
+					font-family: "Roboto", sans-serif;
+					font-weight: 300;
+					span {
+						margin: 0 .25em;
+						padding: .35em .5em;
+						font-weight: 400;
+						border-radius: 0.25em;
+						color: $wht;
+					}
+				}
+				a {
+					width: 120px;
+					margin: 1em 1em;
+					border-radius: 0;
+					font-size: 1.25em;
+					font-weight: 700;
+				}
+			}
+		}
+		#antrian {
+			padding: .25em 2em;
+			.dropdown {
+				text-align: right;
+				.dropdown-toggle {
+					width: 100%;
+					.dropdown-menu {
+						width: 100%;
+					}
+				}
+			}
+			.dataTables_wrapper {
+				margin: 1em 0 0 0;
+				.dataTables_paginate {
+					float: none;
+					text-align: center;
+					margin: 1em 0 0 0;
+				}
+			}
+			.col-md-4 { // Tombol RM(rekam medis) dan tombol keluar
+				display: flex;
+				min-height: 450px;
+				> div {
+					margin: auto;
+					> a {	
+						margin: 1em;
+						text-decoration: none;
+						svg {
+							display: block;
+							font-size: 4em;
+							margin: auto;
+						}
+						span {
+							display: block;
+							text-align: center;
+							font-size: 1.25em;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: 576px) {
+		.modal-dialog {
+			max-width: 600px; // default: 500px;
+		}
+	}
+}
+
+/// Administrator - Navbar & Sidebar
+
+#administrator {
+	background: $bl;
+	nav {
+		background: $bl;
+		border-bottom: 10px solid $blsc;
+		div {
+			a {
+				img {
+					margin: 1em 0 0 5em;
+					width: 250px;
+				}
+			}
+			#trapezoid {
+				border-bottom: 100px solid $wht;
+				border-left: 50px solid transparent;
+				height: 0;
+				width: 500px;
+				// Font	
+				font-family: "Roboto", sans-serif;
+				font-size: 4em;
+				font-style: italic;
+				font-weight: 700;
+				text-align: center;
+				color: $bl;
+				hr:nth-of-type(2) {
+					transform: translate(-64px, 35px) rotate(116deg);
+				}
+				hr:nth-of-type(3) {
+					transform: translate(-54px, 35px) rotate(116deg);
+				}
+				hr {
+					position: absolute;
+					width: 113px;
+					transform: translate(-74px, 35px) rotate(116deg);
+					border-top: 2px solid $bl;
+				}
+			}
+		}
+	}
+	main > .row {
+		margin: 0;
+	}
+	main {
+		div {
+			#sidebar {
+				min-height: calc(100vh - 100px - 10px);
+				padding: 4em 0 0 2em;
+				color: $wht;
+				> ul:first {
+					text-align: center;
+				}
+				ul {
+					list-style-type: none;
+					font-size: 1.8em;
+					padding: 0;
+					> span {
+						margin: 0 0 0 .5em;
+						svg {
+							transform: translate(0px, 3px);
+						}
+					}
+					li {
+						margin: 0 0 0 1em;
+						font-size: .9em;
+						font-weight: 300;
+						svg {
+							transform: rotate(90deg);
+							margin: 0 .45em 0 0;
+						}
+						a:hover {
+							color: $bl;
+							background: $wht;
+							border-top-left-radius: .5em;
+							border-bottom-left-radius: .5em;
+						}
+						a {			
+							position: absolute; // Mengatasi new line karena padding melebihi ruang
+							padding: .1em 5.47em .1em .5em;						
+							color: $wht;
+							text-decoration: none;
+							width: 100%;
+						}
+					}
+				}
+				ul:nth-of-type(1) {
+					margin: 0 1em 1em 0;
+					background: $wht;
+					border-radius: 1em;
+					> a:hover {
+						opacity: .7;
+					}
+					> a {
+						padding: .15em 1.5em;
+						text-decoration: none;
+						color: $bl;
+					}
+				}
+				ul:nth-of-type(2) {
+					margin: 0 0 1em 0;
+				}
+				ul:nth-of-type(3) {
+					margin: 1em 0 0 0;
+					a:nth-of-type(1) {
+						li {
+							svg {
+								transform: translate(2px, 0);
+							}
+						}
+					}
+					a:nth-of-type(3) {
+						li {
+							svg {
+								font-size: 1.1em;
+							}
+						}
+					}
+					a {
+						text-decoration: none;
+						li:hover {
+							color: $bl;
+							background: $wht;
+						}
+						li {
+							margin: .25em 0 0 -25px;
+							color: $wht;
+							font-weight: 300;
+							svg {
+								transform: none;
+								margin: 0 .5em 0 2em;
+							}
+						}
+					}
+				}
+				ul:nth-of-type(4) {
+				margin: 2em 0 1em 0;
+					a {
+						padding: 0 5.47em 0 0.5em;
+					}
+				}
+			}
+		}
+	}
+	@media(min-width: 576px) {
+		.modal-dialog {
+			max-width: 550px; // default: 500px;
+		}
+	}
+}
+
+
+// Administrator - Pasien
+
+.privilege-resepsionis { // Ifelse privilege
+    display: flex;
+	border: 2px solid $blsc;
+	background-image: url("../../public/img/background-privilege.jpg");
+	// Custom height and width to fix buggy
+    height: 515px;
+    width: 800px;
+    margin: -20px 0 0px -215px;
+    padding: 1em;
+	h2 {
+		margin: auto;
+		text-align: center;
+		font-size: 4em;
+		color: #fff;
+		font-weight: 700;
+	}
+}
+
+.privilege-administrator { // Ifelse privilege
+    display: flex;
+	border: 2px solid $blsc;
+	background-image: url("../../public/img/background-privilege.jpg");
+	margin: 0 -15px;
+	height: 100%;
+	h1 {
+		margin: auto;
+		text-align: center;
+		font-size: 4em;
+		color: #fff;
+		font-weight: 700;
+	}
+}
+
+.privilege-pemeriksaan {
+	margin: -3em -10em -3em -2em;
+    min-height: 520px;
+}
+
+.privilege-pembayaran {
+	margin: -3em -2em;
+    min-height: 520px;
+}
+
+#dashboard, #daftar, #pasien, #dokter, 
+#obat, #pemeriksaan, #pembayaran, #laporan,
+#atur {
+	background: $wht;
+	font-family: "Roboto", sans-serif;
+}
+
+#dashboard {
+	background-image: url("../../public/img/background-dashboard.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-left: 10px solid $blsc;
+	.row {
+		height: 100%;
+		.col-md-4 {
+			display: flex;
+			.dashboard-card {
+				margin: auto;
+				padding: 2em 5em;
+				border-radius: 1.5em;
+				background: $blsc;
+				opacity: .95;
+				text-align: center;
+				.fa-users {
+					color: #f6f6f8;
+					font-size: 6em;
+				}
+				> a { 
+					background: #cdcdcd;
+					border-color: #cdcdcd;
+					display: block;
+					margin: 1em 0;
+					font-size: 2em;
+					font-weight: 300;
+					color: $wht;
+				}
+			}
+		}
+	}
+}
+
+#daftar {
+	> .container {
+		height: 100%;
+		> .row {
+			height: 100%;
+			> .col-md-8 {
+				margin: auto;
+			}
+		}
+	}
+}
+
+#atur {
+	font-size: 1.5em;
+	li {
+		margin: 1em 0;
+		padding: .25em 0;
+		list-style: none;
+		border-bottom: 1px dashed;
+		.aksi {
+			float: right;
+			form {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+#pasien {
+	.alert {
+		margin: 1em;
+	}
+	button, button:active, button:hover {
+		border: $blsc;
+	}
+	.btn-add {
+		margin: 2em 0 .75em 2em;
+		padding: .45em .75em;
+		font-size: 1.5em;
+		font-family: "Roboto Condensed", sans-serif;
+		font-weight: 700;
+		background: $bl;
+		svg {	
+			margin: 0 0 0 1em;
+			font-size: 1em;
+		}
+	}
+	#tbl_pasien_wrapper {
+		margin: 0 3em;
+	}
+	#tbl_pasien_paginate {	
+		position: absolute;
+		top: -4.5em;
+		left: 12em;
+		min-width: 365px;
+		#tbl_pasien_previous {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+		span {
+			position: relative;
+			top: -.35em;
+		}
+		#tbl_pasien_next {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+	}
+	#inputPasien {
+		label, .form-group {
+			margin: .25em 0;
+			font-weight: 400;
+			.form-control {
+				font-weight: 300;
+			}
+		}
+		div:nth-of-type(3) { // Button pria atau wanita
+			margin: .25em 0;
+			label {
+				padding: .5em 2em;
+			}
+			label:nth-of-type(1).active {
+				background: #5e8a85;
+				border: #5e8a85;
+			}
+			label:nth-of-type(1) {
+				background: $bl;
+				border: $bl;
+			}
+			label:nth-of-type(2).active {
+				background: #c72486;
+				border: #c72486;
+			}
+			label:nth-of-type(2) {
+				background: #f786ca;
+				border: #f786ca;
+			}
+		}
+		.text-center { // Tombol submit
+			margin: 1em 0 0 0;
+			input {
+				background: $bl;
+				padding: .5em 4em;
+				border-radius: 2em;
+				font-size: 1.25em;
+			}
+		}
+	}
+	#buka-rm {
+		text-align: center;
+		h2 {
+			font-weight: 700;
+			font-size: 2.25em;
+			color: $bl;
+		}
+		> a {
+			font-family: "Roboto", sans-serif;
+			margin: .5em 0;
+			padding: .45em 6em;
+			font-size: 1.5em;
+			font-weight: 700;
+			background: $bl;
+		}
+	}
+}
+
+// Administrator - Dokter
+
+#dokter {
+	.alert {
+		margin: 1em;
+	}
+	button, button:active, button:hover {
+		border: $blsc;
+	}
+	.btn-add {
+		margin: 2em 0 .75em 2em;
+		padding: .45em .75em;
+		font-size: 1.5em;
+		font-family: "Roboto Condensed", sans-serif;
+		font-weight: 700;
+		background: $bl;
+		svg {	
+			margin: 0 0 0 1em;
+			font-size: 1em;
+		}
+	}
+	#tbl_dokter_wrapper {
+		margin: 0 3em;
+	}
+	#tbl_dokter_paginate {	
+		position: absolute;
+		top: -4.5em;
+		left: 12em;
+		min-width: 365px;
+		#tbl_dokter_previous {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+		span {
+			position: relative;
+			top: -.35em;
+		}
+		#tbl_dokter_next {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+	}
+	#tbl_poliklinik_wrapper {
+		margin: 0 3em;
+	}
+	#tbl_poliklinik_paginate {	
+		position: absolute;
+		top: -4.5em;
+		left: 12em;
+		min-width: 365px;
+		#tbl_poliklinik_previous {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+		span {
+			position: relative;
+			top: -.35em;
+		}
+		#tbl_poliklinik_next {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+	}
+}
+
+// Administrator - Obat
+@import url(http://fonts.googleapis.com/css?family=Exo+2:300);
+
+#obat {
+	.alert {
+		margin: 1em;
+	}
+	button, button:active, button:hover {
+		border: $blsc;
+	}
+	.btn-add {
+		margin: 2em 0 .75em 2em;
+		padding: .45em .75em;
+		font-size: 1.5em;
+		font-family: "Roboto Condensed", sans-serif;
+		font-weight: 700;
+		background: $bl;
+		svg {	
+			margin: 0 0 0 1em;
+			font-size: 1em;
+		}
+	}
+	.modal-body {
+		label {
+			display: block;
+		}
+		#rp_harga_satuan, #harga_satuan {
+			display: inline-block;
+		}
+		#rp_harga_satuan {
+			width: 8%;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		#harga_satuan {
+			width: 92%;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+	#tbl_obat_wrapper {
+		margin: 0 3em;
+	}
+	#tbl_obat_paginate {	
+		position: absolute;
+		top: -4.5em;
+		left: 12em;
+		min-width: 365px;
+		#tbl_obat_previous {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+		span {
+			position: relative;
+			top: -.35em;
+		}
+		#tbl_obat_next {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+	}
+	#tbl_resep_dokter_wrapper {
+		margin: 0 3em;
+	}
+	#tbl_resep_dokter_paginate {	
+		position: absolute;
+		top: -4.5em;
+		left: 12em;
+		min-width: 365px;
+		#tbl_resep_dokter_previous {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+		span {
+			position: relative;
+			top: -.35em;
+		}
+		#tbl_resep_dokter_next {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+	}
+}
+
+// Administrator - Pemeriksaan
+
+#pemeriksaan {
+	padding: 3em 10em 3em 2em;
+	> h2 {
+		display: inline-block;
+		font-size: 2.5em;
+		font-weight: 700;
+		color: $drkbl;
+	}
+	#pemeriksaan-pagination {
+		display: inline-block;
+		margin: 0 0 0 40em;
+		h3 {
+			display: inline-block;
+			margin: 0 .75em;
+			font-family: "Roboto Condensed", sans-serif;
+			font-size: 2.5em;
+		}
+		a {
+			svg {
+				font-size: 2.5em;
+				color: $bl;
+			}
+		}
+		#selectpoli {
+			font-size: 1.5em;
+			width: 10em;
+		}
+	}
+	#pemeriksaan-pasien {
+		min-height: 300px;
+		margin: 3em -15px;
+		.col-md-4 {	
+			margin: 1em 0;
+			.pasien {
+				border: 1px solid $gry;
+				border-radius: 2em;
+				margin: 0 1em 0 0;
+				padding: .3em 1em;
+				font-family: "Roboto Condensed", sans-serif;
+				font-size: 1.5em;
+				// Mengatasi line baru bermasalah
+				overflow: hidden;
+				height: 48px;
+				.badge {
+					margin: .75em 0 0 0;
+				}
+				> button {			
+					border-radius: 50%;
+					border: 0;
+					background: #FF6483;
+					color: $wht;
+					// Mengatasi posisi bermasalah
+					position: absolute;
+					top: 9px;
+					right: 46px;
+				}
+				.modal-body {
+					.row {
+						.col-md-6 {
+							> label {
+								display: block;
+							}
+							.closeBtnRsp {
+								color: #ccc;
+								float: right;
+								font-size: 30px;
+								line-height: 30px;
+							}
+							.closeBtnRsp:hover, .closeBtnRsp:focus {
+								color: #000;
+								text-decoration: none;
+								cursor: pointer;
+							}
+							.modal-traversy-body {
+								h4 {
+									transform: translate(0, 5px);
+								}
+								.inputQty {
+									display: inline-block;
+									max-width: 65px;
+									max-height: 25px;
+								}
+							}
+						}
+						.rincian-obat {
+							li {
+								list-style: square;
+							}
+						}
+						.rincian-resep {
+							li {
+								list-style: square;
+							}
+						}
+					}
+				}
+				a {
+					color: #000;
+					text-decoration: none;
+					position: relative;
+					color: #FFF;
+					display: inline-block;
+					padding: 10px 40px 10px 10px;
+					border-radius: 5px;
+					overflow: hidden;
+					transform: translateZ(0);
+					font-family: 'Exo 2', sans-serif;
+					font-size: .7em;
+					svg {
+						margin: 0 0 0 1em;
+					}
+				}
+				a:hover::before {
+						background: #D02180 linear-gradient(130deg, #86b5fb 30%, #ff8dc8 80%);
+				}
+				a:before {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 10px;
+						margin-top: -2.4em;
+						left: -20%;
+						width: 100px;
+						height: 100px;
+						background: #c380a5 linear-gradient(130deg, #4a90f8 30%, #f84aa5 80%);
+						transform: rotate(47deg) skewX(20deg) translateZ(0);
+						z-index: -1;
+				}
+				a:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 1px;
+						left: 1px;
+						width: 70%;
+						height: 100%;
+						transform: translateZ(0);
+						z-index: -1;
+						border-top: solid 1px #FFF;
+						border-radius: 5px 0;
+						opacity: 0.4;
+				}
+				#harga_tambahan {
+					display: inline-block;
+					width: 75%;
+				}
+			}
+		}
+		> h2 {
+			margin: auto;
+		}
+	}
+}
+
+// Administrator - Pembayaran
+
+#pembayaran {
+	padding: 3em 2em;
+	> h2 {
+		display: inline-block;
+		font-size: 2.5em;
+		font-weight: 700;
+		color: $drkbl;
+		margin: 0 0 .75em 0;
+	}
+	> button {
+		margin: 0 0 0.75em 0;
+		font-size: 1.75em;
+	}
+	#tbl_pembayaran_filter {
+		float: none;
+		text-align: left;
+	}
+	#tbl_pembayaran_paginate {	
+		position: relative;
+		top: -1.5em;
+		min-width: 365px;
+		#tbl_pembayaran_previous {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+		span {
+			position: relative;
+			top: -.35em;
+		}
+		#tbl_pembayaran_next {
+			svg {
+				font-size: 2em;
+				color: $bl;
+			}
+		}
+	}
+	#resepObat {
+		// Pricing total harga obat dan resep; https://jsfiddle.net/s6yfaeLp/
+		.dot-div{border-bottom:thin dashed gray; width:100%; height:14px}
+		.text-div{margin-top:-14px}
+		.text-span{background: #fff; padding-right:5px}
+		.float-right{padding-left: 5px}
+	}
+	hr {
+		border-style: dashed;
+		margin: 10px -15px;
+	}
+	
+	@media(min-width: 576px) {
+		.modal-dialog {
+			max-width: 700px;
+		}
+	}
+}
+
+// Administrator - Laporan
+
+#laporan {
+	#pengunjungBulanan, #pengunjungTahunan  {
+	  height: 350px;
+	}
+}
+
+// Flaws
+
+table.dataTable.no-footer { // Footer table border
+	border-bottom: 1px solid rgba(34,36,38,.15)
+}
+
+// Modal - Traversy
+.modal-traversy {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background: rgba(0,0,0,0.5);
+}
+.modal-traversy-content{
+	margin: 10% auto;
+	width: 60%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+	animation-name: modalopen;
+	animation-duration: 1s;
+}
+.modal-traversy-header h2 {
+	margin: 0;
+}
+.modal-traversy-header {
+	background: #428bca;
+	padding: 15px;
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.modal-traversy-body {
+	padding: 10px 20px;
+	background: #fff;
+}
+
+.closeBtn {
+	color: #ccc;
+	float: right;
+	font-size: 30px;
+	line-height: 30px;
+}
+.closeBtn:hover, .closeBtn:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// CSS Cetak
+
+@media screen {
+  #printSection {
+      display: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility:hidden;
+	font-size: 1.25em;
+  }
+  #printSection, #printSection * {
+    visibility:visible;
+  }
+  #printSection {
+    position:absolute;
+    left:0;
+    top:0;
+  }
+}
